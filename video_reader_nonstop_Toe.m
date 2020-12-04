@@ -7,7 +7,7 @@ clearvars
 % pathname_defalt='D:\matlabpractice\utssi\yokomine\20181222市原柿の木台計測\iPad\';
 % pathname_defalt='D:\matlabpractice\utssi\yokomine\20190222検見川計測\';
 % pathname_defalt='D:\matlabpractice\yokomine\パッティング_船橋CC_190511\Cam2\';
-pathname_defalt='D:\matlabpractice\utssi\yokomine\パッティング_吉岡_190925\';
+pathname_defalt='S:\OneDrive - The University of Tokyo\東大授業\バイメカ\ビデオ解析用\';
 filename_defalt=sprintf('%s*.MOV',pathname_defalt);
 % filename_defalt=sprintf('%s*.mp4',pathname_defalt);
 [filename_cell,pathname,ok_flag]=uigetfile(filename_defalt,'解析ファイルの選択','multiselect','on');
@@ -40,7 +40,7 @@ jj = 0;
 
 formatOut = 'mmddHHMM';
 dateString = datestr(now,formatOut);
-fid_output=fopen(strcat('video_reader_output_Waist_',dateString,'.txt'),'a');
+fid_output=fopen(strcat('video_reader_output_Toe_',dateString,'.txt'),'a');
 
 while hasFrame(vidObj)
     vidFrame = readFrame(vidObj);
